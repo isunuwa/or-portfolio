@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Righteous", cursive;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1600px;
+}
+main .snap {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+main .snap section {
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+}
+main .snap section .section-name {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(42px, 9rem, 54px);
+  padding: 12px;
+}
+main .snap section .section-name:hover {
+  color: #ff4500;
+}
+main .snap section .section-name span {
+  transition: all 0.3s ease;
+}
+main .snap section .section-name span:hover {
+  color: #fff;
+  transform: translateY(-3px);
+}
+main .snap section.hero-intro {
+  background: #E8F2D8;
+  display: flex;
+  align-items: center;
+}
+main .snap section.hero-intro .or-intro {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .snap section.hero-intro .or-intro h1 {
+  font-size: clamp(40px, 9rem, 58px);
+  text-transform: uppercase;
+}
+main .snap section.hero-intro .or-intro h4 span {
+  text-decoration: none;
+  filter: blur(5px);
+  -webkit-filter: blur(4px);
+  transition: ease-in-out 0.2s;
+}
+main .snap section.hero-intro .or-intro h4 span:hover {
+  filter: none;
+  -webkit-filter: none;
+}
+@media screen and (max-width: 834px) {
+  main .snap section.hero-intro .or-intro h4 span {
+    text-decoration: none;
+    filter: none;
+  }
+}
+main .snap section.hero-contact {
+  overflow: hidden;
+  background: #E8F2D8;
+  display: flex;
+}
+main .snap section.hero-contact .or-card {
+  height: 100%;
+}
+main .snap section.hero-contact .contact-div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(28px, 8rem, 36px);
+}
+main .snap section.hero-contact .contact-div .contact-links ul {
+  display: flex;
+}
+main .snap section.hero-contact .contact-div .contact-links ul li {
+  list-style: none;
+  text-decoration: none;
+  padding: 20px;
+}
+main .snap section.hero-contact .contact-div .contact-links ul li a {
+  color: #07111c;
+  transition: all 0.3s ease;
+}
+main .snap section.hero-contact .contact-div .contact-links ul li a:hover {
+  color: #ff4500;
+}
+@media screen and (max-width: 415px) {
+  main .snap section.hero-contact .contact-div {
+    font-size: 26px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
