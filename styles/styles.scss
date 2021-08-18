@@ -15,6 +15,8 @@ $transition: all 0.3s ease;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 body{
   font-family: $primary-fam;
@@ -37,6 +39,7 @@ main{
       width: 100%;
       height: 100%;
       scroll-snap-align: start;
+      background: $primary-back;
 
       .section-name{
         width: 120px;
@@ -138,6 +141,52 @@ main{
           }
         }
       }
+
+      &.hero-work{
+        display: flex;
+        background: $primary-back;
+
+      }
     }
   }
+}
+
+// animation page loader
+.intro{
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .intro-text{
+    font-size: 4rem;
+    color: rgb(233, 233, 233);
+  }
+}
+.slider{
+  background: $primary-back;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  transform: translateY(100%);
+}
+
+.hide{
+  background: black;
+  overflow: hidden;
+}
+.hide span{
+  transform: translateY(100%);
+  display: inline-block;
 }
